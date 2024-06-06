@@ -4,6 +4,7 @@
 public abstract class Person
 {
     public readonly static string INSERT = "INSERT INTO Person (Document, Name, BirthDate, AddressId, Phone, Email) VALUES (@Document, @Name, @BirthDate, @AddressId, @Phone, @Email);";
+
     public string Document { get; set; }
     public string Name { get; set; }
     public DateTime BirthDate { get; set; }

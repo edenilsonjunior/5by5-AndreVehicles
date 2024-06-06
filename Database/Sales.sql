@@ -2,7 +2,6 @@ IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'DBAndreVehicles')
     CREATE DATABASE DBAndreVehicles;
 
 USE DBAndreVehicles;
-GO;
 
 if exists (select * from sys.tables where name = 'Sale')
     DROP TABLE Sale;
@@ -21,9 +20,6 @@ if exists (select * from sys.tables where name = 'Card')
 
 if exists (select * from sys.tables where name = 'BankSlip')
     DROP TABLE BankSlip;
-
-
-
 
 
 CREATE TABLE BankSlip(
@@ -98,5 +94,3 @@ CREATE TABLE Sale(
     CONSTRAINT fk_sale_car FOREIGN KEY (CarPlate) REFERENCES Car(Plate),
     CONSTRAINT fk_sale_payment FOREIGN KEY (PaymentId) REFERENCES Payment(Id)
 );
-
-

@@ -2,7 +2,7 @@ IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'DBAndreVehicles')
     CREATE DATABASE DBAndreVehicles;
 
 USE DBAndreVehicles;
-GO;
+
 
 if exists (select * from sys.tables where name = 'Purchase')
     DROP TABLE Purchase;
@@ -43,7 +43,8 @@ CREATE TABLE CarOperation(
 
     Id INT IDENTITY(1,1),
     CarPlate NVARCHAR(8) NOT NULL,
-    OperationId INT NOT NULL
+    OperationId INT NOT NULL,
+    Status BIT NOT NULL
 
     CONSTRAINT pk_car_operation PRIMARY KEY (Id),
     CONSTRAINT fk_car_operation_car FOREIGN KEY (CarPlate) REFERENCES Car(Plate),

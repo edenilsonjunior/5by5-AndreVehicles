@@ -2,7 +2,6 @@ IF NOT EXISTS(SELECT * FROM sys.databases WHERE name = 'DBAndreVehicles')
     CREATE DATABASE DBAndreVehicles;
 
 USE DBAndreVehicles;
-GO;
 
 if exists(select * from sys.tables where name = 'Customer')
     DROP TABLE Customer;
@@ -62,7 +61,7 @@ CREATE TABLE Role(
 CREATE TABLE Employee(
 
     Document NVARCHAR(14) NOT NULL,
-    RoleId NVARCHAR(50) NOT NULL,
+    RoleId INT NOT NULL,
     CommissionValue DECIMAL(13,2) NOT NULL,
     Commission DECIMAL(13,2) NOT NULL
 

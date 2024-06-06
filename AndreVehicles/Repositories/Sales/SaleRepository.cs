@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Repositories.Sales;
 
-namespace Repositories.Sales
+public class SaleRepository
 {
-    internal class SaleRepository
-    {
-    }
 }

@@ -1,9 +1,12 @@
-﻿namespace Models.People;
+﻿using System.Net.NetworkInformation;
+
+namespace Models.People;
 
 
 public class Address
 {
     public readonly static string INSERT = "INSERT INTO Address (Street, PostalCode, District, StreetType, AdditionalInfo, Number, State, City) VALUES (@Street, @PostalCode, @District, @StreetType, @AdditionalInfo, @Number, @State, @City); SELECT CAST(scope_identity() as int)";
+    public readonly static string SELECT = "SELECT Id, Street, PostalCode, District, StreetType, AdditionalInfo, Number, State, City FROM Address";
 
     public int Id { get; set; }
     public string Street { get; set; }

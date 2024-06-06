@@ -5,6 +5,8 @@ public class Car
 {
     public readonly static string INSERT = "INSERT INTO Car(Plate, Name, YearManufacture, YearModel, Color, Sold) VALUES(@Plate, @Name, @YearManufacture, @YearModel, @Color, @Sold)";
 
+    public readonly static string SELECT = "SELECT Plate, Name, YearManufacture, YearModel, Color, Sold FROM Car";
+
     public string Plate { get; set; }
     public string Name { get; set; }
     public int YearManufacture { get; set; }
