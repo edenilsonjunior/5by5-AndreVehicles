@@ -3,14 +3,12 @@
 
 public class Car
 {
+    public readonly static string INSERT = "INSERT INTO Car(Plate, Name, YearManufacture, YearModel, Color, Sold) VALUES(@Plate, @Name, @YearManufacture, @YearModel, @Color, @Sold)";
+
     public string Plate { get; set; }
-
     public string Name { get; set; }
-
     public int YearManufacture { get; set; }
-
     public int YearModel { get; set; }
-
     public string Color { get; set; }
     public bool Sold { get; set; }
 

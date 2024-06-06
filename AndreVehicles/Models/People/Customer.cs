@@ -3,19 +3,15 @@
 
 public class Customer : Person
 {
+    public readonly static string INSERT = "INSERT INTO Customer (Document, Income) VALUES (@Document, @Income);";
+
     public decimal Income { get; set; }
-    public string Document { get; set; }
 
     public Customer() { }
 
-    public Customer(string document, string name, DateTime birthDate, Address address, string phone, string email, decimal income)
+    public Customer(string document, string name, DateTime birthDate, Address address, string phone, string email, decimal income) : base(document, name, birthDate, address, phone, email)
     {
-        Document = document;
-        Name = name;
-        BirthDate = birthDate;
-        Address = address;
-        Phone = phone;
-        Email = email;
         Income = income;
     }
+
 }

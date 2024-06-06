@@ -3,6 +3,8 @@
 
 public class Purchase
 {
+    public readonly static string INSERT = "INSERT INTO Purchase (CarPlate, Price, PurchaseDate) VALUES(@CarPlate, @Price, @PurchaseDate)";
+
     public int Id { get; set; }
     public Car Car { get; set; }
     public decimal Price { get; set; }

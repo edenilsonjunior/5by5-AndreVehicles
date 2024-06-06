@@ -3,6 +3,8 @@
 
 public class Payment
 {
+    public readonly static string INSERT = "INSERT INTO Payment(CardNumber, BankSlipId, PixId, PaymentDate) VALUES(@CardNumber, @BankSlipId, @PixId, @PaymentDate); SELECT CAST(SCOPE_IDENTITY() AS INT);";
+
     public int Id { get; set; }
     public Card? Card { get; set; }
     public BankSlip? BankSlip { get; set; }

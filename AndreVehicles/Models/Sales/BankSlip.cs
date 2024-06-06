@@ -3,6 +3,8 @@
 
 public class BankSlip
 {
+    public readonly static string INSERT = "INSERT INTO BankSlip(Number, DueDate) VALUES(@Number, @DueDate); SELCT CAST (SCOPE_IDENTITY() AS INT);";
+
     public int Id { get; set; }
     public int Number { get; set; }
     public DateTime DueDate { get; set; }

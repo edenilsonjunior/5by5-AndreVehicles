@@ -3,6 +3,8 @@
 
 public class CarOperation
 {
+    public readonly static string INSERT = "INSERT INTO CarOperation(CarPlate, OperationId) VALUES(@CarPlate, @OperationId)";
+
     public int Id { get; set; }
     public Car Car { get; set; }
     public Operation Operation { get; set; }
