@@ -94,3 +94,4 @@ CREATE TABLE Sale(
     CONSTRAINT fk_sale_car FOREIGN KEY (CarPlate) REFERENCES Car(Plate),
     CONSTRAINT fk_sale_payment FOREIGN KEY (PaymentId) REFERENCES Payment(Id)
 );
+

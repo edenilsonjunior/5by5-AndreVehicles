@@ -4,6 +4,7 @@
 public class Card
 {
     public readonly static string INSERT = "INSERT INTO Card(CardNumber, SecurityCode, ExpirationDate, CardHolderName) VALUES(@CardNumber, @SecurityCode, @ExpirationDate, @CardHolderName)";
+    public readonly static string SELECT = "SELECT CardNumber, SecurityCode, ExpirationDate, CardHolderName FROM Card";
 
     public string CardNumber { get; set; }
     public string SecurityCode { get; set; }

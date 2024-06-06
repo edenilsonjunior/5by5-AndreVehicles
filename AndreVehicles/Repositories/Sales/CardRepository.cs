@@ -3,23 +3,16 @@ using System.Configuration;
 
 namespace Repositories.Sales;
 
-public class SaleRepository
+public class CardRepository
 {
     private string _connectionString;
 
-    public SaleRepository()
+    public CardRepository()
     {
         _connectionString = ConfigurationManager.ConnectionStrings["StringConnection"].ConnectionString;
     }
 
-    public int Insert(Sale sale)
-    {
-        throw new NotImplementedException();
-    }
+    public int Insert(Card card) => UtilsRepository<Card>.InsertWithScalar(Card.INSERT, card);
 
-    public List<Payment> GetAll()
-    {
-        throw new NotImplementedException();
-    }
-
+    public List<Card> GetAll() => UtilsRepository<Card>.GetAll(Card.SELECT);
 }
