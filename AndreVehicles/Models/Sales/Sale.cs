@@ -6,6 +6,7 @@ using Models.People;
 public class Sale
 {
     public readonly static string INSERT = "INSERT INTO Sale(CustomerDocument, EmployeeDocument, CarPlate, PaymentId, SaleDate, SalePrice) VALUES(@CustomerDocument, @EmployeeDocument, @CarPlate, @PaymentId, @SaleDate, @SalePrice);";
+    public readonly static string SELECT = @"select Id, CustomerDocument, EmployeeDocument, CarPlate, PaymentId, SaleDate, SalePrice from Sale";
 
     public int Id { get; set; }
     public Customer Customer { get; set; }
