@@ -1,7 +1,7 @@
 ﻿namespace Models.People;
 
 
-internal class Customer : Person
+public class Customer : Person
 {
     public decimal Income { get; set; }
     public string Document { get; set; }
